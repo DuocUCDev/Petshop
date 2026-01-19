@@ -1,0 +1,27 @@
+:root {
+  --color-primary: #5c8d3d; /* Eco natural green */
+  --color-secondary: #8b5a2b; /* Earth brown */
+  --color-accent: #e8f5e9; /* Light green */
+  --bg-color: #fcf9f2; /* Cream paper texture */
+  --text-main: #2c2c2c;
+  --text-muted: #666666;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}

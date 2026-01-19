@@ -3,16 +3,16 @@
 ## 1. Arquitectura del Sistema
 
 ### 1.1. Stack Tecnológico
-*   **Frontend:** Next.js 16 (App Router). Uso mandatorio de Server Components para data fetching y Server Actions para mutaciones.
+*   **Frontend:** React 18 + Vite.
 *   **Backend / Base de Datos:** Supabase (PostgreSQL).
-*   **Autenticación:** Supabase Auth (Middleware de Next.js para protección de rutas).
-*   **Validación:** Zod (para Server Actions y formularios) + TypeScript estricto.
+*   **Routing:** React Router DOM v6.
+*   **Autenticación:** Supabase Auth.
+*   **Validación:** Zod + TypeScript estricto.
 *   **Estilos:** CSS Vanilla (o Tailwind si se requiere, pero priorizando diseño custom "Eco-friendly").
 
 ### 1.2. Principios de Diseño
-*   **Single Responsibility:** Separación estricta entre `/app` (Rutas), `/components` (UI), `/services` (Lógica de Negocio) y `/db` (Acceso a Datos).
-*   **Seguridad:** Row Level Security (RLS) habilitado en todas las tablas. Validación de inputs en servidor con Zod.
-*   **Performance:** Imágenes optimizadas (WebP), Lazy Loading y uso agresivo de caché de Next.js donde aplique.
+*   **Single Responsibility:** Separación estricta entre `/src/pages` (Vistas), `/src/components` (UI), `/src/services` (Lógica de Negocio/Supabase) y `/src/hooks`.
+*   **Seguridad:** Row Level Security (RLS) habilitado en todas las tablas.
 
 ## 2. Modelo de Datos (Esquema Propuesto)
 
