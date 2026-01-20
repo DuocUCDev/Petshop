@@ -4,9 +4,11 @@
 
 ### 1.1. Stack Tecnológico
 *   **Frontend:** React 18 + Vite.
-*   **Backend / Base de Datos:** Supabase (PostgreSQL).
+*   **Frontend:** React 18 + Vite.
+*   **Data Persistence:** Archivos JSON estáticos (Simulación de DB) + LocalStorage (Para Carrito/Sesión).
+*   **Arquitectura:** Repository Pattern para desacoplar la fuente de datos (JSON actual -> API Futura).
 *   **Routing:** React Router DOM v6.
-*   **Autenticación:** Supabase Auth.
+*   **Autenticación:** Simulación local (Context API + LocalStorage).
 *   **Validación:** Zod + TypeScript estricto.
 *   **Estilos:** CSS Vanilla (o Tailwind si se requiere, pero priorizando diseño custom "Eco-friendly").
 

@@ -1,18 +1,8 @@
-import { Routes, Route } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom';
+import { router } from '@/routes';
 
 function App() {
-  return (
-    <div className="app-container">
-      <Routes>
-        <Route path="/" element={
-          <div style={{ padding: '2rem', textAlign: 'center' }}>
-            <h1>🌱 Petshop Natural</h1>
-            <p>Tu tienda de mascotas eco-friendly.</p>
-          </div>
-        } />
-      </Routes>
-    </div>
-  )
+  return <RouterProvider router={router} />;
 }
 
 export default App

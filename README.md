@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# Petshop "Eco-friendly" MVP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend MVP de e-commerce de productos para mascotas con un enfoque eco-friendly.
 
-Currently, two official plugins are available:
+![Petshop Hero](https://images.unsplash.com/photo-1450778869180-41d0601e046e?q=80&w=1600&auto=format&fit=crop)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
 
-## React Compiler
+*   **Catálogo de Productos**: Listado con filtros por categoría y búsqueda.
+*   **Detalle de Producto**: Información detallada, stock y selección de cantidad.
+*   **Carrito de Compras**: Gestión de estado global con persistencia.
+*   **Checkout**: Simulación de compra con formulario de envío.
+*   **Autenticación**: Login/Registro simulado con gestión de roles (Usuario/Admin).
+*   **Panel de Administración**: Dashboard con estadísticas, gestión de productos y pedidos (UI).
+*   **Diseño Responsive**: Adaptado a móviles y escritorio con Tailwind CSS.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías
 
-## Expanding the ESLint configuration
+*   React 18 + Vite
+*   TypeScript
+*   Tailwind CSS + shadcn/ui
+*   Zustand (State Management)
+*   React Router DOM (Routing) as 'router'
+*   Lucide React (Icons)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Instalación
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  Clonar el repositorio.
+2.  Instalar dependencias:
+    ```bash
+    npm install
+    ```
+3.  Iniciar servidor de desarrollo:
+    ```bash
+    npm run dev
+    ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Estructura del Proyecto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*   `src/components/ui`: Componentes atómicos reutilizables.
+*   `src/components/layout`: Layouts principales (Main, Admin, Auth).
+*   `src/pages`: Vistas de la aplicación.
+*   `src/store`: Estado global (Cart, Auth).
+*   `src/services`: Simulación de llamadas a API.
